@@ -1,146 +1,496 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultoría de Ingeniería - SOLEYA INGENIERIA y CONSULTORIA </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioFrance Ingénierie | Consultoría Ambiental y Biomasa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Fondos decorativos difuminados para resaltar el efecto Glassmorfismo -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
 
-    <!-- Top Bar / Aviso -->
-    <div class="top-bar">
-        <div class="container top-bar-content">
-            <div class="top-contact">
-                <a href="https://wa.me/33609104671" target="_blank" rel="noopener noreferrer">
-                    <span>WhatsApp: +33 6 09 10 46 71</span>
-                </a>
-            </div>
-            <div class="top-links">
-                <a href="#contacto">Área de Clientes</a>
-                <a href="#contacto">Empleo</a>
-                <a href="#contacto">Contacto</a>
-            </div>
+  <!-- Barra de navegación -->
+  <header class="navbar glass-panel">
+    <div class="container nav-content">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>
+        BioFrance <strong>Ingénierie</strong>
+      </a>
+
+      <div class="nav-actions">
+        <!-- Selector de idioma -->
+        <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
         </div>
+
+        <!-- Botón Hamburguesa Magnético -->
+        <div class="magnetic-wrap" id="magneticWrap">
+          <button
+            class="hamburger-btn"
+            id="hamburgerBtn"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="navDrawer"
+          >
+            <span class="hamburger-lines">
+              <span class="line line-1"></span>
+              <span class="line line-2"></span>
+              <span class="line line-3"></span>
+            </span>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <!-- Navegación Principal -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <span class="logo-main">SOLEYA</span>
-                <span class="logo-sub">INGENIERÍA & CONSULTORIA</span>
-            </a>
-            <nav class="nav-links">
-                <a href="#nosotros">Nosotros</a>
-                <a href="#servicios" class="active">Servicios</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#actualidad">Actualidad</a>
-                <a href="#contacto" class="btn-nav-contact">Contactar</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Menú Desplegable con Animación Rápida y Moderna -->
+    <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+      <div class="container drawer-inner">
+        <nav class="drawer-links">
+          <a href="#servicios" class="drawer-link" style="--i: 1">
+            <span class="link-index">01</span>
+            <span data-i18n="nav_services">Servicios</span>
+          </a>
+          <a href="#enfoque" class="drawer-link" style="--i: 2">
+            <span class="link-index">02</span>
+            <span data-i18n="nav_focus">Francia → Latinoamérica</span>
+          </a>
+          <a href="#faq" class="drawer-link" style="--i: 3">
+            <span class="link-index">03</span>
+            <span data-i18n="nav_faq">Preguntas Frecuentes</span>
+          </a>
+        </nav>
 
-    <!-- Banner / Breadcrumbs -->
-    <section class="page-header">
-        <div class="container">
-            <span class="breadcrumb">Inicio &nbsp;/&nbsp; Servicios &nbsp;/&nbsp; <strong>Consultoría de Ingeniería</strong></span>
-            <h1>Consultoría de Ingeniería: cuándo contratarla y por qué</h1>
+        <div class="drawer-footer" style="--i: 4">
+          <a
+            href="https://wa.me/33609104671?text=Hola,%20me%20interesa%20contactar%20con%20BioFrance%20Ing%C3%A9nierie."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp"
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+            </svg>
+            <span data-i18n="nav_contact_wa">WhatsApp Directo: +33 6 09 10 46 71</span>
+          </a>
         </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Capa oscura sutil cuando el menú está abierto -->
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <main>
+    <!-- Sección Principal (Hero) -->
+    <section class="hero container">
+      <div class="glass-card hero-card">
+        <span class="badge" data-i18n="hero_badge">Ingeniería Ambiental Francesa • Alcance Global</span>
+        <h1 data-i18n="hero_title">
+          Transformamos el reciclaje urbano en energía y proyectos industriales sostenibles
+        </h1>
+        <p data-i18n="hero_subtitle">
+          Especialistas en el diseño y construcción de instalaciones y maquinaria para biomasa en ciudades de Francia. Exportamos nuestra metodología y excelencia operativa a Latinoamérica y el mundo.
+        </p>
+        <div class="hero-cta">
+          <a
+            href="https://wa.me/33609104671?text=Hola,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20ingenier%C3%ADa%20ambiental%20y%20biomasa."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp"
+          >
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+            </svg>
+            <span data-i18n="hero_btn_wa">Hablar por WhatsApp (+33 6 09 10 46 71)</span>
+          </a>
+          <a href="#servicios" class="btn btn-secondary" data-i18n="hero_btn_services">
+            Explorar Servicios
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- Contenido Principal Estilo Insiteca -->
-    <main class="main-content">
-        <div class="container content-grid">
-            <article class="article-body">
-                <div class="article-meta">
-                    <span class="date">2026</span>
-                    <span class="category">EXCELENCIA OPERACIONAL & TÉCNICA</span>
-                </div>
+    <!-- Sección de Productos / Servicios -->
+    <section id="servicios" class="container section">
+      <div class="section-header">
+        <h2 data-i18n="services_title">Nuestras Soluciones y Servicios</h2>
+        <p data-i18n="services_subtitle">
+          Transferencia tecnológica y gestión integral adaptada a los desafíos ambientales e industriales de cada región.
+        </p>
+      </div>
 
-                <p class="lead">Todo buen proyecto comienza con una buena idea. Una idea clara, innovadora e impecable… a la que pronto le empiezan a aparecer las variables y los “peros”, los condicionantes normativos, las limitaciones presupuestarias, los requisitos de eficiencia, de integración de instalaciones y de coordinación entre distintas áreas.</p>
+      <div class="services-grid">
+        <!-- Producto 1: Gestión de proyectos industriales -->
+        <article class="glass-card service-card">
+          <div class="service-img-wrapper">
+            <img
+              src="1.jpg"
+              alt="Sala de control e ingeniería de gestión de proyectos industriales"
+              loading="lazy"
+            />
+            <span class="service-number">01</span>
+          </div>
+          <div class="service-body">
+            <h3 data-i18n="s1_title">Gestión de Proyectos Industriales</h3>
+            <p data-i18n="s1_desc">
+              Dirección integral bajo estándares europeos: planificación, ingeniería básica y de detalle, selección de proveedores, control presupuestario y puesta en marcha de plantas industriales llave en mano.
+            </p>
+            <a
+              href="https://wa.me/33609104671?text=Hola,%20solicito%20informaci%C3%B3n%20sobre%20Gesti%C3%B3n%20de%20Proyectos%20Industriales."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card-link"
+              data-i18n="card_cta"
+            >
+              Consultar por WhatsApp →
+            </a>
+          </div>
+        </article>
 
-                <p>La complejidad es la norma, sobre todo cuando lo mejor de tus mejores ideas es que se salen de la norma. Es algo que los profesionales de la ingeniería sabemos bien. Nos gusta ser la respuesta a tantas preguntas. Y esa respuesta tiene que ser, ahora sí, técnica y objetivamente “impecable”. Porque un cálculo mal dimensionado, una especificación incompleta o una interpretación inexacta de la normativa pueden comprometer los plazos, los costes y el rendimiento operativo de todo el proyecto.</p>
+        <!-- Producto 2: Creación de proyectos de biomasa -->
+        <article class="glass-card service-card">
+          <div class="service-img-wrapper">
+            <img
+              src="2.jpg"
+              alt="Planta de procesamiento de residuos urbanos para biomasa en Francia"
+              loading="lazy"
+            />
+            <span class="service-number">02</span>
+          </div>
+          <div class="service-body">
+            <h3 data-i18n="s2_title">Creación de Proyectos de Biomasa</h3>
+            <p data-i18n="s2_desc">
+              Diseño de instalaciones y maquinaria especializada para transformar residuos urbanos, forestales y agroindustriales en biomasa de alto valor energético, replicando casos de éxito en municipios franceses.
+            </p>
+            <a
+              href="https://wa.me/33609104671?text=Hola,%20solicito%20informaci%C3%B3n%20sobre%20Creaci%C3%B3n%20de%20Proyectos%20de%20Biomasa."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card-link"
+              data-i18n="card_cta"
+            >
+              Consultar por WhatsApp →
+            </a>
+          </div>
+        </article>
 
-                <p>Y cuando el proyecto avanza, corregir decisiones técnicas resulta siempre más costoso que anticiparlas. Esta es la razón por la que la consultoría de ingeniería en <strong>SOLEYA INGENIERIA & CONSULTORIA</strong> se convierte en un aliado estratégico. La garantía para acompañar todo el proceso con un conocimiento técnico especializado, estructurarlo con criterio, analizar alternativas viables y tomar decisiones fundamentadas desde el principio hasta el final.</p>
+        <!-- Producto 3: Asesoría en mejoramiento continuo -->
+        <article class="glass-card service-card">
+          <div class="service-img-wrapper">
+            <img
+              src="3.jpg"
+              alt="Ingenieros ambientales realizando asesoría de mejoramiento continuo en planta"
+              loading="lazy"
+            />
+            <span class="service-number">03</span>
+          </div>
+          <div class="service-body">
+            <h3 data-i18n="s3_title">Asesoría en Mejoramiento Continuo</h3>
+            <p data-i18n="s3_desc">
+              Optimización de líneas de reciclaje y valorización energética mediante metodologías Lean, reducción de mermas, eficiencia energética y capacitación técnica para equipos locales en Latinoamérica.
+            </p>
+            <a
+              href="https://wa.me/33609104671?text=Hola,%20solicito%20informaci%C3%B3n%20sobre%20Asesor%C3%ADa%20en%20Mejoramiento%20Continuo."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card-link"
+              data-i18n="card_cta"
+            >
+              Consultar por WhatsApp →
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-                <h2>Qué es exactamente una consultoría de ingeniería y qué valor aporta</h2>
-                <p>Una consultoría de ingeniería es un servicio profesional especializado que acompaña a un proyecto técnico desde su concepción hasta sus fases más avanzadas, aportando rigor, experiencia y soluciones técnicas basadas en cálculos y criterios objetivos.</p>
-                <p>En esencia, es un soporte llevado a cabo por profesionales con conocimientos específicos en disciplinas como instalaciones industriales, energía, eficiencia, seguridad o legalización de proyectos. La consultoría no solo interpreta requerimientos normativos y técnicos complejos, sino que ayuda también a estructurar todo el desarrollo para que sea viable, seguro y eficaz.</p>
-
-                <h2>La importancia de recurrir a una consultoría desde la fase inicial</h2>
-                <p>Las decisiones que se toman al inicio de un proyecto condicionan todo lo que viene después. Definen su alcance real, delimitan su viabilidad técnica y determinan su encaje normativo y económico. Es en esta etapa preliminar donde nuestra consultoría aporta un impacto decisivo:</p>
-                <ul>
-                    <li><strong>Análisis de alternativas:</strong> Evaluar condicionantes técnicos antes de comprometer grandes inversiones.</li>
-                    <li><strong>Planificación rigurosa:</strong> Cronogramas realistas e identificación temprana de hitos críticos y riesgos operativos.</li>
-                    <li><strong>Entorno regulatorio:</strong> Acompañamiento especializado en normativas industriales complejas y tramitación administrativa.</li>
-                </ul>
-
-                <h2>Cómo ayudamos a optimizar costes, plazos y recursos</h2>
-                <p>En cualquier proyecto técnico, el equilibrio entre inversión, calendario y rendimiento operativo condiciona su éxito real. Nuestra intervención optimiza cada partida mediante un desglose financiero riguroso, minimizando modificaciones posteriores en obra y dimensionando con precisión equipos y materiales para evitar sobredimensionamientos innecesarios.</p>
-
-                <!-- Cuadro Destacado / Cita -->
-                <div class="highlight-box">
-                    <h3>¿Necesitas asesoramiento técnico especializado para tu planta?</h3>
-                    <p>Contáctanos directamente por WhatsApp para coordinar una evaluación técnica preliminar de tus requerimientos industriales.</p>
-                    <a href="https://wa.me/33609104671?text=Hola,%20deseo%20más%20información%20sobre%20los%20servicios%20de%20consultoría%20de%20ingeniería." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-inline">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
-                        Abrir Chat de WhatsApp (+33 6 09 10 46 71)
-                    </a>
-                </div>
-            </article>
-
-            <!-- Barra Lateral -->
-            <aside class="sidebar">
-                <div class="sidebar-widget">
-                    <h3>Áreas de Especialización</h3>
-                    <ul class="sidebar-list">
-                        <li><a href="#servicios">Ingeniería Industrial & Procesos</a></li>
-                        <li><a href="#servicios">Energía y Eficiencia Energética</a></li>
-                        <li><a href="#servicios">Seguridad y Autoprotección</a></li>
-                        <li><a href="#servicios">Obras, Seguridad y Salud</a></li>
-                        <li><a href="#servicios">Asesoría Técnica Especializada</a></li>
-                    </ul>
-                </div>
-
-                <div class="sidebar-widget contact-widget" id="contacto">
-                    <h3>Contacto Directo</h3>
-                    <p>Hablemos sobre los requerimientos de su próximo proyecto industrial.</p>
-                    <a href="https://wa.me/33609104671" target="_blank" rel="noopener noreferrer" class="btn-sidebar-wa">
-                        Consultar por WhatsApp
-                    </a>
-                </div>
-            </aside>
+    <!-- Sección Puente Francia - Latinoamérica -->
+    <section id="enfoque" class="container section">
+      <div class="glass-card banner-card">
+        <div class="banner-text">
+          <h2 data-i18n="bridge_title">Experiencia comprobada en Francia, diseñada para Latinoamérica</h2>
+          <p data-i18n="bridge_desc">
+            Las normativas ambientales europeas nos han llevado a desarrollar maquinaria robusta y modelos de economía circular altamente rentables. Acompañamos a gobiernos locales, empresas de servicios públicos e industrias privadas en América Latina para adaptar e implementar estas soluciones con éxito.
+          </p>
         </div>
-    </main>
-
-    <!-- Pie de Página -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-info">
-                <span class="logo-footer">SOLEYA INGENIERIA & CONSULTORIA</span>
-                <p>Soluciones técnicas avanzadas para el sector industrial y corporativo.</p>
-            </div>
-            
-            <blockquote class="motivational-quote">
-                "La excelencia en ingeniería no se logra cuando no queda nada que agregar, sino cuando no queda nada que quitar."
-            </blockquote>
-
-            <div class="footer-bottom">
-                <p>&copy; SOLEYA INGENIERIA & CONSULTORIA. Todos los derechos reservados.</p>
-            </div>
+        <div class="banner-stats">
+          <div class="stat-box">
+            <strong>100%</strong>
+            <span data-i18n="stat_1">Economía Circular</span>
+          </div>
+          <div class="stat-box">
+            <strong>FR → LATAM</strong>
+            <span data-i18n="stat_2">Transferencia Técnica</span>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/33609104671?text=Hola,%20necesito%20soporte%20de%20ingeniería." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-        <svg viewBox="0 0 32 32" width="32" height="32" fill="currentColor">
-            <path d="M16 2C8.28 2 2 8.28 2 16c0 2.47.65 4.88 1.88 7.01L2 30l7.18-1.88C11.24 29.33 13.59 30 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm7.68 19.65c-.32.91-1.87 1.74-2.58 1.84-.66.1-1.5.14-2.42-.15-.56-.18-1.28-.42-2.2-.82-3.87-1.67-6.4-5.57-6.59-5.83-.19-.26-1.58-2.1-1.58-4s.99-2.83 1.35-3.22c.36-.39.78-.49 1.04-.49.26 0 .52.01.75.01.24 0 .56-.09.88.67.32.78 1.1 2.68 1.19 2.88.1.19.16.42.03.68-.13.26-.19.42-.39.65-.19.23-.41.51-.58.68-.19.19-.39.4-.17.78.23.39 1.01 1.66 2.16 2.69 1.48 1.32 2.73 1.73 3.12 1.92.39.19.61.16.84-.1.23-.26.97-1.13 1.23-1.52.26-.39.52-.32.88-.19.36.13 2.27 1.07 2.66 1.26.39.19.65.29.75.45.1.16.1.94-.22 1.85z"/>
-        </svg>
-    </a>
+    <!-- Sección de Preguntas y Respuestas (FAQ) -->
+    <section id="faq" class="container section">
+      <div class="section-header">
+        <h2 data-i18n="faq_title">Preguntas y Respuestas Frecuentes</h2>
+        <p data-i18n="faq_subtitle">Resolvemos las dudas habituales sobre nuestros proyectos y consultoría internacional.</p>
+      </div>
 
+      <div class="faq-list">
+        <details class="glass-card faq-item" open>
+          <summary data-i18n="faq_q1">¿Qué tipo de residuos pueden transformarse en biomasa con sus instalaciones?</summary>
+          <p data-i18n="faq_a1">
+            Nuestras plantas y equipos procesan residuos verdes urbanos (podas municipales), subproductos forestales, desechos agroindustriales y fracción orgánica seleccionada, convirtiéndolos en astillas, pellets o combustible sólido recuperado de alta eficiencia.
+          </p>
+        </details>
+
+        <details class="glass-card faq-item">
+          <summary data-i18n="faq_q2">¿Cómo trabajan con empresas o municipios en Latinoamérica?</summary>
+          <p data-i18n="faq_a2">
+            Realizamos un diagnóstico inicial remoto o presencial, diseñamos la ingeniería adaptada a la composición local de residuos y clima, especificamos la maquinaria necesaria y acompañamos toda la gestión del proyecto hasta la capacitación del personal operativo.
+          </p>
+        </details>
+
+        <details class="glass-card faq-item">
+          <summary data-i18n="faq_q3">¿Solo fabrican maquinaria o también asesoran plantas ya existentes?</summary>
+          <p data-i18n="faq_a3">
+            Cubrimos ambos frentes. Desarrollamos proyectos nuevos desde cero y también brindamos asesoría en mejoramiento continuo para optimizar plantas de reciclaje o energía que ya están operando y buscan aumentar su rentabilidad y disponibilidad mecánica.
+          </p>
+        </details>
+
+        <details class="glass-card faq-item">
+          <summary data-i18n="faq_q4">¿Cómo podemos iniciar una evaluación de viabilidad para nuestro proyecto?</summary>
+          <p data-i18n="faq_a4">
+            Puedes escribirnos directamente por WhatsApp al +33 6 09 10 46 71. Agendaremos una primera reunión técnica sin compromiso para conocer el volumen de residuos, objetivos energéticos y alcance de tu proyecto.
+          </p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer glass-panel">
+    <div class="container footer-content">
+      <div>
+        <strong>BioFrance Ingénierie</strong>
+        <p data-i18n="footer_desc">Consultoría de Ingeniería Ambiental, Biomasa y Gestión Industrial.</p>
+      </div>
+      <a
+        href="https://wa.me/33609104671"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-whatsapp"
+      >
+        WhatsApp: +33 6 09 10 46 71
+      </a>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a
+    href="https://wa.me/33609104671"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    aria-label="Contactar por WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+    </svg>
+  </a>
+
+  <!-- Scripts: Menú Hamburguesa Magnético, Despliegue Rápido y Multi-idioma -->
+  <script>
+    /* ==========================================
+       1. MENÚ HAMBURGUESA MAGNÉTICO AL CURSOR
+       ========================================== */
+    const magneticWrap = document.getElementById("magneticWrap");
+    const hamburgerBtn = document.getElementById("hamburgerBtn");
+    const navDrawer = document.getElementById("navDrawer");
+    const menuBackdrop = document.getElementById("menuBackdrop");
+    const drawerLinks = document.querySelectorAll(".drawer-link");
+
+    // Efecto magnético suave siguiendo el cursor
+    magneticWrap.addEventListener("mousemove", (e) => {
+      const rect = magneticWrap.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      const deltaX = (e.clientX - centerX) * 0.42;
+      const deltaY = (e.clientY - centerY) * 0.42;
+
+      hamburgerBtn.style.transition = "transform 0.08s cubic-bezier(0.22, 1, 0.36, 1)";
+      hamburgerBtn.style.transform = `translate3d(${deltaX}px, ${deltaY}px, 0)`;
+    });
+
+    // Retorno elástico al salir el cursor
+    magneticWrap.addEventListener("mouseleave", () => {
+      hamburgerBtn.style.transition = "transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1)";
+      hamburgerBtn.style.transform = "translate3d(0px, 0px, 0)";
+    });
+
+    // Abrir / plegar menú con animación rápida
+    function toggleMenu(forceState) {
+      const isOpen = typeof forceState === "boolean"
+        ? forceState
+        : !hamburgerBtn.classList.contains("is-open");
+
+      hamburgerBtn.classList.toggle("is-open", isOpen);
+      hamburgerBtn.setAttribute("aria-expanded", String(isOpen));
+      navDrawer.classList.toggle("is-open", isOpen);
+      navDrawer.setAttribute("aria-hidden", String(!isOpen));
+      menuBackdrop.classList.toggle("is-open", isOpen);
+    }
+
+    hamburgerBtn.addEventListener("click", () => toggleMenu());
+    menuBackdrop.addEventListener("click", () => toggleMenu(false));
+
+    drawerLinks.forEach((link) => {
+      link.addEventListener("click", () => toggleMenu(false));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && hamburgerBtn.classList.contains("is-open")) {
+        toggleMenu(false);
+      }
+    });
+
+    /* ==========================================
+       2. TRADUCCIÓN MULTI-IDIOMA (ES / EN / FR)
+       ========================================== */
+    const translations = {
+      es: {
+        nav_services: "Servicios",
+        nav_focus: "Francia → Latinoamérica",
+        nav_faq: "Preguntas Frecuentes",
+        nav_contact_wa: "WhatsApp Directo: +33 6 09 10 46 71",
+        hero_badge: "Ingeniería Ambiental Francesa • Alcance Global",
+        hero_title: "Transformamos el reciclaje urbano en energía y proyectos industriales sostenibles",
+        hero_subtitle: "Especialistas en el diseño y construcción de instalaciones y maquinaria para biomasa en ciudades de Francia. Exportamos nuestra metodología y excelencia operativa a Latinoamérica y el mundo.",
+        hero_btn_wa: "Hablar por WhatsApp (+33 6 09 10 46 71)",
+        hero_btn_services: "Explorar Servicios",
+        services_title: "Nuestras Soluciones y Servicios",
+        services_subtitle: "Transferencia tecnológica y gestión integral adaptada a los desafíos ambientales e industriales de cada región.",
+        s1_title: "Gestión de Proyectos Industriales",
+        s1_desc: "Dirección integral bajo estándares europeos: planificación, ingeniería básica y de detalle, selección de proveedores, control presupuestario y puesta en marcha de plantas industriales llave en mano.",
+        s2_title: "Creación de Proyectos de Biomasa",
+        s2_desc: "Diseño de instalaciones y maquinaria especializada para transformar residuos urbanos, forestales y agroindustriales en biomasa de alto valor energético, replicando casos de éxito en municipios franceses.",
+        s3_title: "Asesoría en Mejoramiento Continuo",
+        s3_desc: "Optimización de líneas de reciclaje y valorización energética mediante metodologías Lean, reducción de mermas, eficiencia energética y capacitación técnica para equipos locales en Latinoamérica.",
+        card_cta: "Consultar por WhatsApp →",
+        bridge_title: "Experiencia comprobada en Francia, diseñada para Latinoamérica",
+        bridge_desc: "Las normativas ambientales europeas nos han llevado a desarrollar maquinaria robusta y modelos de economía circular altamente rentables. Acompañamos a gobiernos locales, empresas de servicios públicos e industrias privadas en América Latina para adaptar e implementar estas soluciones con éxito.",
+        stat_1: "Economía Circular",
+        stat_2: "Transferencia Técnica",
+        faq_title: "Preguntas y Respuestas Frecuentes",
+        faq_subtitle: "Resolvemos las dudas habituales sobre nuestros proyectos y consultoría internacional.",
+        faq_q1: "¿Qué tipo de residuos pueden transformarse en biomasa con sus instalaciones?",
+        faq_a1: "Nuestras plantas y equipos procesan residuos verdes urbanos (podas municipales), subproductos forestales, desechos agroindustriales y fracción orgánica seleccionada, convirtiéndolos en astillas, pellets o combustible sólido recuperado de alta eficiencia.",
+        faq_q2: "¿Cómo trabajan con empresas o municipios en Latinoamérica?",
+        faq_a2: "Realizamos un diagnóstico inicial remoto o presencial, diseñamos la ingeniería adaptada a la composición local de residuos y clima, especificamos la maquinaria necesaria y acompañamos toda la gestión del proyecto hasta la capacitación del personal operativo.",
+        faq_q3: "¿Solo fabrican maquinaria o también asesoran plantas ya existentes?",
+        faq_a3: "Cubrimos ambos frentes. Desarrollamos proyectos nuevos desde cero y también brindamos asesoría en mejoramiento continuo para optimizar plantas de reciclaje o energía que ya están operando y buscan aumentar su rentabilidad y disponibilidad mecánica.",
+        faq_q4: "¿Cómo podemos iniciar una evaluación de viabilidad para nuestro proyecto?",
+        faq_a4: "Puedes escribirnos directamente por WhatsApp al +33 6 09 10 46 71. Agendaremos una primera reunión técnica sin compromiso para conocer el volumen de residuos, objetivos energéticos y alcance de tu proyecto.",
+        footer_desc: "Consultoría de Ingeniería Ambiental, Biomasa y Gestión Industrial."
+      },
+      en: {
+        nav_services: "Services",
+        nav_focus: "France → Latin America",
+        nav_faq: "FAQ",
+        nav_contact_wa: "Direct WhatsApp: +33 6 09 10 46 71",
+        hero_badge: "French Environmental Engineering • Global Reach",
+        hero_title: "Transforming urban recycling into clean energy and sustainable industrial projects",
+        hero_subtitle: "Specialists in designing and building biomass facilities and machinery across French cities. We export our project management expertise and operational excellence to Latin America and worldwide.",
+        hero_btn_wa: "Chat on WhatsApp (+33 6 09 10 46 71)",
+        hero_btn_services: "Explore Services",
+        services_title: "Our Solutions & Services",
+        services_subtitle: "Technology transfer and end-to-end management tailored to the environmental and industrial challenges of each region.",
+        s1_title: "Industrial Project Management",
+        s1_desc: "Comprehensive management under European standards: planning, basic and detailed engineering, vendor selection, budget control, and turnkey commissioning of industrial plants.",
+        s2_title: "Biomass Project Development",
+        s2_desc: "Design of specialized facilities and machinery to convert urban, forestry, and agro-industrial waste into high-value energy biomass, replicating proven French municipal models.",
+        s3_title: "Continuous Improvement Consulting",
+        s3_desc: "Optimization of recycling and waste-to-energy lines through Lean methodologies, waste reduction, energy efficiency, and technical training for local teams in Latin America.",
+        card_cta: "Inquire via WhatsApp →",
+        bridge_title: "Proven expertise in France, engineered for Latin America",
+        bridge_desc: "European environmental standards have driven us to build robust machinery and highly profitable circular economy models. We partner with local governments, utilities, and private industries in Latin America to successfully adapt and deploy these solutions.",
+        stat_1: "Circular Economy",
+        stat_2: "Technical Transfer",
+        faq_title: "Frequently Asked Questions",
+        faq_subtitle: "Answers to common questions about our biomass facilities and international consulting.",
+        faq_q1: "What types of waste can be converted into biomass using your facilities?",
+        faq_a1: "Our plants and equipment process urban green waste (municipal pruning), forestry by-products, agro-industrial waste, and sorted organic fractions, turning them into high-efficiency wood chips, pellets, or solid recovered fuel.",
+        faq_q2: "How do you collaborate with companies or municipalities in Latin America?",
+        faq_a2: "We conduct an initial remote or on-site assessment, tailor the engineering to local waste composition and climate, specify required machinery, and oversee the entire project through operational staff training.",
+        faq_q3: "Do you only build new machinery or also advise existing plants?",
+        faq_a3: "We cover both areas. We build greenfield projects from scratch and provide continuous improvement consulting to optimize existing recycling or energy plants seeking higher profitability and mechanical uptime.",
+        faq_q4: "How can we start a feasibility assessment for our project?",
+        faq_a4: "Message us directly on WhatsApp at +33 6 09 10 46 71. We will schedule a no-obligation initial technical call to review your waste volume, energy goals, and project scope.",
+        footer_desc: "Environmental Engineering, Biomass & Industrial Management Consulting."
+      },
+      fr: {
+        nav_services: "Services",
+        nav_focus: "France → Amérique Latine",
+        nav_faq: "Questions Fréquentes",
+        nav_contact_wa: "WhatsApp Direct : +33 6 09 10 46 71",
+        hero_badge: "Ingénierie Environnementale Française • Rayonnement International",
+        hero_title: "Nous transformons le recyclage urbain en énergie et en projets industriels durables",
+        hero_subtitle: "Spécialistes de la conception et construction d'installations et de machines pour la biomasse dans les villes françaises. Nous exportons notre savoir-faire en gestion de projet vers l'Amérique latine et le monde.",
+        hero_btn_wa: "Discuter sur WhatsApp (+33 6 09 10 46 71)",
+        hero_btn_services: "Découvrir nos Services",
+        services_title: "Nos Solutions et Services",
+        services_subtitle: "Transfert de technologie et gestion globale adaptés aux enjeux environnementaux et industriels de chaque territoire.",
+        s1_title: "Gestion de Projets Industriels",
+        s1_desc: "Direction complète selon les normes européennes : planification, ingénierie de base et de détail, sélection des fournisseurs, maîtrise des coûts et mise en service d'installations clés en main.",
+        s2_title: "Création de Projets de Biomasse",
+        s2_desc: "Conception d'installations et d'équipements spécialisés pour valoriser les déchets urbains, forestiers et agro-industriels en biomasse énergétique, sur le modèle des collectivités françaises.",
+        s3_title: "Conseil en Amélioration Continue",
+        s3_desc: "Optimisation des lignes de recyclage et de valorisation énergétique via les méthodes Lean, réduction des pertes, efficacité énergétique et formation technique des équipes en Amérique latine.",
+        card_cta: "Consulter sur WhatsApp →",
+        bridge_title: "Une expertise éprouvée en France, conçue pour l'Amérique latine",
+        bridge_desc: "Les normes environnementales européennes nous ont conduits à développer des machines robustes et des modèles d'économie circulaire rentables. Nous accompagnons les collectivités et industriels d'Amérique latine dans le déploiement de ces solutions.",
+        stat_1: "Économie Circulaire",
+        stat_2: "Transfert Technique",
+        faq_title: "Questions et Réponses Fréquentes",
+        faq_subtitle: "Les réponses aux questions courantes sur nos installations et notre conseil international.",
+        faq_q1: "Quels types de déchets peuvent être transformés en biomasse avec vos installations ?",
+        faq_a1: "Nos unités traitent les déchets verts urbains (élagage municipal), les sous-produits forestiers, les résidus agro-industriels et la fraction organique triée pour produire des plaquettes, granulés ou combustibles solides à haut rendement.",
+        faq_q2: "Comment travaillez-vous avec les entreprises ou municipalités en Amérique latine ?",
+        faq_a2: "Nous réalisons un diagnostic initial à distance ou sur site, adaptons l'ingénierie aux déchets et au climat locaux, spécifions les équipements et assurons le suivi complet jusqu'à la formation des opérateurs.",
+        faq_q3: "Construisez-vous uniquement des installations neuves ou conseillez-vous aussi des sites existants ?",
+        faq_a3: "Nous intervenons sur les deux volets : création de projets clés en main et conseil en amélioration continue pour optimiser les usines de recyclage existantes et accroître leur disponibilité mécanique.",
+        faq_q4: "Comment lancer une étude de faisabilité pour notre projet ?",
+        faq_a4: "Écrivez-nous directement sur WhatsApp au +33 6 09 10 46 71. Nous organiserons un premier échange technique sans engagement pour analyser vos gisements de déchets et vos objectifs.",
+        footer_desc: "Conseil en Ingénierie Environnementale, Biomasse et Gestion Industrielle."
+      }
+    };
+
+    const langButtons = document.querySelectorAll(".lang-btn");
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      langButtons.forEach((btn) => {
+        btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+      });
+    }
+
+    langButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        setLanguage(btn.getAttribute("data-lang"));
+      });
+    });
+  </script>
 </body>
 </html>
